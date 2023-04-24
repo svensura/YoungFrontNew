@@ -40,6 +40,8 @@ div {
   border-radius: 50%;
 }
 
+/* Citations */
+
 .citationlistitem{
   width: 96px;
   height: 30px;
@@ -273,4 +275,524 @@ div {
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
+}
+
+/* Bubbles */
+
+.backgroundBubbles{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/Tip_Menu_2.png');
+}
+
+.tipTypewriterLower{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipKeyboardLower.png');
+}
+
+.tipTypewriterUpper{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipKeyboardUpper.png');
+}
+.overlayTipTypewriter{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipBox.png');
+}
+
+
+.ableismusButton{
+  position: absolute;
+  top: 240px;
+  left: 80px;
+  width: 400px;
+  height: 340px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Ableismus.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.demokratiefeindlichButton{
+  position: absolute;
+  top: 540px;
+  left: 90px;
+  width: 400px;
+  height: 340px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Demokratiefeindlich.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.diskriminierungButton{
+  position: absolute;
+  top: 590px;
+  left: 500px;
+  width: 400px;
+  height: 285px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Diskriminierung.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.hassImNetzButton{
+  position: absolute;
+  top: 1190px;
+  left: 600px;
+  width: 400px;
+  height: 310px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/HassImNetz.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.queerfeindlichButton{
+  position: absolute;
+  top:930px;
+  left: 610px;
+  width: 400px;
+  height: 280px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Queerfeindlich.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.radikalisierungButton{
+  position: absolute;
+  top:260px;
+  left: 610px;
+  width: 400px;
+  height: px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Radikalisierung.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.radikalisierungButton{
+  position: absolute;
+  top:260px;
+  left: 610px;
+  width: 400px;
+  height: 340px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Radikalisierung.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.rechteGewaltButton{
+  position: absolute;
+  top: 1130px;
+  left: 110px;
+  width: 400px;
+  height: 310px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/RechteGewalt.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.sexismusButton{
+  position: absolute;
+  top: 910px;
+  left: 110px;
+  width: 400px;
+  height: 300px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/Sexismus.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+.sozialeAusgrenzungButton{
+  position: absolute;
+  top: 1410px;
+  left: 170px;
+  width: 400px;
+  height: 280px;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('./media/images/SozialeAusgrenzung.png');
+  border: 0px solid rgb(250, 250, 250);
+  -webkit-animation: 4s steps(12) infinite;
+  animation: 4s steps(12) infinite;
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+}
+
+.enterButton{
+  position: absolute;
+  top: 250px;
+  left: 800px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/Button_Kleiner.png');
+  background-repeat: no-repeat;
+  border: 0px solid rgb(250, 250, 250);
+}
+
+
+.explanationDisplay {
+  position: absolute;
+  top: 325px;
+  left: 80px;
+  display: flex;
+  justify-content: center;
+  width: 910px;
+  height: 1193px;
+  resize: none;
+  padding: .5rem;
+  outline: none;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 0.0rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.explanation {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  display: flex;
+  justify-content: left;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
+  line-height: 30px;
+  color: rgb(0, 0, 0);
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.controlButtons {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  display: flex;
+  justify-content: left;
+  padding: 1rem;
+}
+
+.closeButton{
+  position: absolute;
+  top: 10px;
+  left: 850px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/CloseButton.png');
+  background-repeat: no-repeat;
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.printButton{
+  position: absolute;
+  top: 1440px;
+  left: 370px;
+  width: 500px;
+  height: 330px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/PrintButton.png');
+  background-repeat: no-repeat;
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.tipButton{
+  position: absolute;
+  top: 1390px;
+  left: 670px;
+  width: 500px;
+  height: 330px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/TipButton.png');
+  background-repeat: no-repeat;
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.ABLEISMUS {
+background-color: rgb(166, 204, 198);
+}
+
+.DEMOKRATIEFEINDLICH {
+  background-color: rgb(93, 88, 146);
+}
+
+.DISKRIMINIERUNG {
+  background-color: rgb(251, 190, 93);
+}
+
+.HASSIMNETZ {
+  background-color: rgb(82, 136, 198);
+}
+
+.QUEERFEINDLICH {
+background-color: rgb(238, 115, 48);
+}
+
+.RADIKALISIERUNG {
+  background-color: rgb(82, 136, 198);
+}
+
+.RECHTEGEWALT {
+  background-color: rgb(96, 190, 175);
+}
+
+.SEXISMUS {
+  background-color: rgb(234, 80, 83);
+}
+
+.SOZIALEAUSGRENZUNG {
+  background-color: rgb(255, 239, 24);
+}
+
+
+.keyboardBubbles {
+  position: absolute;
+  top: 1160px;
+  left: 25px;
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  min-width: 1050px;
+  flex-direction: column;
+  align-items: center;
+}
+.keysBubbles {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 7px 9px;
+  font-size: 3rem;
+  color: transparent;
+  width: 51px;
+  height: 50px;
+}
+.deleteBubbles {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 7px 9px;
+  font-size: 3rem;
+  color: transparent;
+  width: 123px;
+  height: 50px;
+}
+
+.shiftBubbles{
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 7px 9px;
+  font-size: 3rem;
+  color: transparent;
+  width: 123px;
+  height: 50px;
+}
+.spaceBubbles {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 9px 9px;
+  font-size: 1rem;
+  color: transparent;
+  width: 460px;
+  height: 60px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.textareaBubbles {
+  position: absolute;
+  top: 325px;
+  left: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 910px;
+  height: 1193px;
+  resize: none;
+  padding: .5rem;
+  font-size: 2rem;
+  outline: none;
+  border: 5px solid rgb(221, 70, 0);
+  border-radius: 0.4rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.textareaTypewriterBubbles {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 735px;
+  height: 340px;
+  resize: none;
+  padding: .5rem;
+  font-size: 2rem;
+  outline: none;
+  border: 0px solid rgb(221, 70, 0);
+  border-radius: 0.4rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.inputTextBubbles {
+  position: absolute;
+  top: 730px;
+  left: 170px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 730px;
+  height: 380px;
+  resize: none;
+  padding: .5rem;
+  font-size: 2rem;
+  outline: none;
+  border: 0px solid rgb(254, 247, 237);
+  border-radius: 0.4rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.closeButtonGrey{
+  position: absolute;
+  top: 450px;
+  left: 920px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/CloseButtonGrau.png');
+  background-repeat: no-repeat;
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.shiftButtonBubbles{
+  position: absolute;
+  top: 1590px;
+  left: 60px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/Button_Kleiner.png');
+  border: 0px solid rgb(250, 250, 250);
+}
+
+
+@-webkit-keyframes swing { 
+  20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: center; } 
+  20% { -webkit-transform: rotate(3deg); } 
+  40% { -webkit-transform: rotate(-1deg); } 
+  60% { -webkit-transform: rotate(0deg); } 
+  80% { -webkit-transform: rotate(-2deg); } 
+  100% { -webkit-transform: rotate(0deg); } 
+}
+
+@keyframes swing { 
+  20% { transform: rotate(3deg); } 
+  40% { transform: rotate(-1deg); } 
+  60% { transform: rotate(0deg); } 
+  80% { transform: rotate(-2deg); } 
+  100% { transform: rotate(0deg); } 
+}
+
+.swing { 
+  -webkit-transform-origin: center; 
+  transform-origin: center; 
+  -webkit-animation-name: swing; 
+  animation-name: swing; 
 }

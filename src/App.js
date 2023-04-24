@@ -9,6 +9,7 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
 import Onscreen from "./components/onscreen.component";
+import SpeakScreen from "./components/speakScreen.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
@@ -88,9 +89,14 @@ class App extends Component {
             </li>
             <li className="nav-item">
               <Link to={"/onscreen"} className="nav-link">
-                OnscreenApp
+                OnscreenCitations
               </Link>
             </li> 
+            <li className="nav-item">
+              <Link to={"/speakScreen"} className="nav-link">
+                OnscreenBubbles
+              </Link>
+            </li>
             {/* {currentUser && ( 
             <li className="nav-item">
               <Link to={"/onscreen"} className="nav-link">
@@ -166,6 +172,7 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/onscreen" element={<Onscreen />} />
+            <Route path="/speakScreen" element={<SpeakScreen />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
