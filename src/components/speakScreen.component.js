@@ -205,16 +205,16 @@ const Onscreen  = () => {
 
   const Explain  = () => {
 
-    let timeout = 450000 // general screensaver-time 
+    let timeout = 60000 // general screensaver-time 
     let explainTimeout 
 
     const restartTimeout = () => {
       clearTimeout(explainTimeout);
       explainTimeout = setTimeout(function() {
-        if (onscreenStatus == 'EXPLAIN'){
+        //if (onscreenStatus == 'EXPLAIN'){
           console.log('TIMEOUT')
           setOnscreenStatus('BUBBLES')
-        }
+        //}
       }, timeout);
     }
 
@@ -275,6 +275,7 @@ const Onscreen  = () => {
     const TipButtonComponent = (props) => {
       const handleClick = () => {
         console.log(props.text);
+        clearTimeout(explainTimeout);
         setOnscreenStatus('TYPEWRITER')
       };
 
@@ -308,7 +309,7 @@ const Onscreen  = () => {
 
     const [inputText, setInputText] = useState("")
     const [keyboardStatus, setKeyboardStatus] = useState([KeyboardStatus.UPPER])
-    let timeout = 15000000 // general screensaver-time 
+    let timeout = 30000 // general screensaver-time 
     let typewriterTimeout 
 
     const restartTimeout = () => {
