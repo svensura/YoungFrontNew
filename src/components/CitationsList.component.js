@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CitationDataService from "../services/CitationDataService";
+import { useNavigate } from "react-router-dom";
 
 
 const CitationsList = () => {
@@ -12,7 +13,7 @@ const CitationsList = () => {
     console.log('USE_EFFECT')
     retrieveCitations();
   }, []);
-
+  const navigate = useNavigate();
 
 
   const updateCitation = () => {
@@ -58,6 +59,7 @@ const CitationsList = () => {
     setCurrentCitation(null);
     setCurrentIndex(-1);
   };
+
 
   const changeChecked = () => {
     const changedCitation = {
@@ -111,9 +113,9 @@ const CitationsList = () => {
       </div>
       <div className="col-md-6" >
         <h4 className="inlineBlock">Citations List</h4>
-        <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={refreshList}>
+          <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={refreshList}>
                RELOAD 
-            </button>
+          </button>
           <div>
             <div className="scroll">
               {citations &&

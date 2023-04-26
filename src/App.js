@@ -15,9 +15,11 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 import AddUser from "./components/AddUser.component";
+import UsersList from "./components/UsersList.component";
 import AddCitation from "./components/AddCitation.component";
 import CitationsList from "./components/CitationsList.component";
-import UsersList from "./components/UsersList.component";
+import AddTip from "./components/AddTip.component";
+import TipsList from "./components/TipsList.component";
 
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
@@ -104,18 +106,31 @@ class App extends Component {
               </Link>
             </li> 
             )} */}
+
               <li className="nav-item">
-              <Link to={"/add"} className="nav-link">
+              <Link to={"/addCitation"} className="nav-link">
                 AddCitation
               </Link>
             </li>
 
-
-
             {showModeratorBoard && (
               <li className="nav-item">
             <Link to={"/citationsList"} className="nav-link">
-              ModeratorBoard
+              CitationMod
+            </Link>
+          </li>
+            )}
+
+            <li className="nav-item">
+              <Link to={"/addTip"} className="nav-link">
+                AddTip
+              </Link>
+            </li>
+
+            {showModeratorBoard && (
+              <li className="nav-item">
+            <Link to={"/tipsList"} className="nav-link">
+              TipMod
             </Link>
           </li>
             )}
@@ -177,12 +192,14 @@ class App extends Component {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/user" element={<BoardUser />} />
-            <Route path="/add" element={<AddCitation />} />
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
             <Route path="/citationsList" element={<CitationsList/>} />
+            <Route path="/addCitation" element={<AddCitation />} />
             <Route path="/usersList" element={<UsersList/>} />
             <Route path="/addUser" element={<AddUser />} />
+            <Route path="/tipsList" element={<TipsList/>} />
+            <Route path="/addTip" element={<AddTip/>} />
           </Routes>
         </div>
 

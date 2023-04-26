@@ -56,7 +56,7 @@ const AddCitation = () => {
       ) : (
         <div>
           <div className="form-group contentbox">
-            <label htmlFor="content">Content</label>
+            <label htmlFor="content">CITATION Content</label>
             <textarea className="form-control" id="content" name="content" rows="4" cols="50" onChange={handleInputChange} value={citation.content}/>
           </div>
           <button onClick={saveCitation} className="btn btn-success">
