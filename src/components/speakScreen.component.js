@@ -12,7 +12,7 @@ import RechteGewaltText from '../media/text/RechteGewaltText.js';
 import RadikalisierungText from '../media/text/RadikalisierungText.js';
 import SexismusText from '../media/text/SexismusText.js';
 import SozialeAusgrenzungText from '../media/text/SozialeAusgrenzungText.js';
-//import CitationDataService from "../services/CitationDataService";
+import TipDataService from "../services/TipDataService";
 
 
 const OnscreenStatus = {
@@ -25,8 +25,7 @@ const OnscreenStatus = {
   RADIKALISIERUNG: 'RADIKALISIERUNG',
   RECHTEGEWALT: 'RECHTEGEWALT',
   SEXISMUS: 'SEXISMUS',
-  SOZIALEAUSGRENZUNG: 'SOZIALEAUSGRENZUNG',
-  TYPEWRITER: 'TYPEWRITER'
+  SOZIALEAUSGRENZUNG: 'SOZIALEAUSGRENZUNG'
 }
 
 const KeyboardStatus = {
@@ -34,13 +33,19 @@ const KeyboardStatus = {
   UPPER: 'UPPER'
 }
 
+const TypewriterStatus = {
+  ON: 'ON',
+  OFF: 'OFF'
+}
 
 
 const Onscreen  = () => {
 
 
   const [onscreenStatus, setOnscreenStatus] = useState([OnscreenStatus.BUBBLES])
+  const [typewriterStatus, setTypewriterStatus] = useState([TypewriterStatus.OFF])
   const navigate = useNavigate();
+
   
   const AbleismusButton = () => {
     const onClick = () => {
@@ -136,20 +141,22 @@ const Onscreen  = () => {
       </button>
     );
   };
-  // const saveAllCitation = (citation) => {
-  //   var data = {
-  //     creator: "test",
-  //     content: citation
-  //   };
 
-  //   CitationDataService.createAllCitation(data)
-  //     .then(response => {
-  //       console.log(response.data);
-  //     })
-  //     .catch(e => {
-  //       console.log(e);
-  //     });
-  // };
+  const saveAllTip = (tip) => {
+    var data = {
+      creator: "test",
+      category: onscreenStatus,
+      content: tip
+    };
+    console.log('DATA to SAVE. ',data);
+    TipDataService.createAllTip(data)
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
 
 
   const Bubbles  = () => {
@@ -205,6 +212,8 @@ const Onscreen  = () => {
 
   const Explain  = () => {
 
+    const [tip, setTip] = useState("")
+
     let timeout = 60000 // general screensaver-time 
     let explainTimeout 
 
@@ -225,31 +234,25 @@ const Onscreen  = () => {
 
     console.log('STATUS: ' + onscreenStatus);
 
-    let Text = onscreenStatus
+    const getTip  = () => {
+      TipDataService.getCatTips(onscreenStatus)
+      .then(response => {
+        console.log("CONTENT: ",response.data[0].content)
+        setTip(response.data[0].content)
+      })
+      .catch(e => {
+        //console.log(e);#
+        return "No Content"
+      })
+    }
 
-    switch (onscreenStatus) {
-      case "ABLEISMUS": {Text = AbleismusText; break;}
-      case "DEMOKRATIEFEINDLICH": {Text = DemokratiefeindlichText; break;}
-      case "DISKRIMINIERUNG": {Text = DiskriminierungText; break;}
-      case "HASSIMNETZ": {Text = HassImNetzText; break;}
-      case "QUEERFEINDLICH": {Text = QueerfeindlichText; break;}
-      case "RADIKALISIERUNG": {Text = RadikalisierungText; break;}
-      case "RECHTEGEWALT": {Text = RechteGewaltText; break;}
-      case "SEXISMUS": {Text = SexismusText; break;}
-      case "SOZIALEAUSGRENZUNG": {Text = SozialeAusgrenzungText; break;}
+    useEffect(() => {
+      
+    getTip()
 
-      }
+    }, []);
 
-    // switch(onscreenStatus) {
-    //           case 'ABLEISMUS': {/*Text = "AbleismusText";*/ break;}
-    //           case 'DEMOKRATIEFEINDLICH': return DemokratiefeindlichText;
-    //           case 'DISKRIMINIERUNG': return DiskriminierungText;
-    //           case 'HASSIMNETZ': return HassImNetzText;
-    //           case 'QUEERFEINDLICH': return QueerfeindlichText;
-    //           case 'RADIKALISIERUNG': return RadikalisierungText;
-    //           case 'RECHTEGEWALT': return RechteGewaltText;
-    //           case 'SEXISMUS': return SexismusText;
-      //         case 'SOZIALEAUSGRENZUNGS': return SozialeAusgrenzungText;
+    
 
     const CloseButtonComponent = (props) => {
       const handleClick = () => {
@@ -276,7 +279,7 @@ const Onscreen  = () => {
       const handleClick = () => {
         console.log(props.text);
         clearTimeout(explainTimeout);
-        setOnscreenStatus('TYPEWRITER')
+        setTypewriterStatus('ON')
       };
 
       return (
@@ -286,14 +289,14 @@ const Onscreen  = () => {
 
 
     return (
-      <div classname="controlButtons">
+      <div>
 
       
       <div className={'explanationDisplay ' + (onscreenStatus)}>
         <img className="tag" src={require('../media/images/' + onscreenStatus + 'Tag.png' )} alt="horse" width="500" height="178" />
         <CloseButtonComponent/>
           <div className="explanation">
-            {Text}
+            {tip}
           </div>
       </div>
       <PrintButtonComponent/>
@@ -338,6 +341,7 @@ const Onscreen  = () => {
         console.log(props.text);
         clearTimeout(typewriterTimeout)
         setOnscreenStatus('BUBBLES')
+        setTypewriterStatus('OFF')
       };
 
       return (
@@ -378,9 +382,9 @@ const Onscreen  = () => {
 
     const EnterButtonComponent = (props) => {
       const handleClick = () => {
-        console.log(props.text);
-        //saveAllCitation(inputChars.join(''))
+        saveAllTip(inputChars.join(''))
         setOnscreenStatus('BUBBLES')
+        setTypewriterStatus('OFF')
       };
     
       return (
@@ -518,7 +522,7 @@ const Onscreen  = () => {
       <div className="black">
        <div className="backgroundBubbles"></div>
        
-      {(onscreenStatus == 'BUBBLES') ? <Bubbles/> : (onscreenStatus == 'TYPEWRITER') ? <Typewriter/> : <Explain/>}
+      {(onscreenStatus == 'BUBBLES') ? <Bubbles/> : (typewriterStatus == 'ON') ? <Typewriter/> : <Explain/>}
       </div>   
   )
 

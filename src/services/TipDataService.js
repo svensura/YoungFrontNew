@@ -10,6 +10,10 @@ const getAllTips = () => {
   return axios.get(API_URL + "moderator/allTips", { headers: authHeader() });
 };
 
+const getCatTips = (category) => {
+  return axios.get(API_URL + `all/approvedTips/${category}`);
+};
+
 const getTip  = id => {
   return axios.get(API_URL + `moderator/tip/${id}`,{ headers: authHeader() });
 };
@@ -39,6 +43,7 @@ const createAllTip = data => {
 
 const TipDataService = {
   getAllTips,
+  getCatTips,
   getTip,
   createTip,
   updateTip,
