@@ -323,6 +323,7 @@ const Onscreen  = () => {
       typewriterTimeout = setTimeout(function() {
         console.log('TIMEOUT')
         setOnscreenStatus('BUBBLES')
+        setTypewriterStatus('OFF')
       }, timeout);
     }
 
