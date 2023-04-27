@@ -257,6 +257,7 @@ const Onscreen  = () => {
     const CloseButtonComponent = (props) => {
       const handleClick = () => {
         console.log(props.text);
+        clearTimeout(explainTimeout);
         setOnscreenStatus('BUBBLES')
       };
 
@@ -267,6 +268,7 @@ const Onscreen  = () => {
 
     const PrintButtonComponent = (props) => {
       const handleClick = () => {
+        clearTimeout(explainTimeout);
         console.log('PRINTOUT: ' + onscreenStatus);
       };
 
@@ -314,6 +316,7 @@ const Onscreen  = () => {
     const [keyboardStatus, setKeyboardStatus] = useState([KeyboardStatus.UPPER])
     let timeout = 30000 // general screensaver-time 
     let typewriterTimeout 
+    
 
     const restartTimeout = () => {
       clearTimeout(typewriterTimeout);
@@ -388,7 +391,7 @@ const Onscreen  = () => {
       };
     
       return (
-        <button type="button" className="enterButton" onClick={ handleClick }>{ props.text }</button>
+        <button type="button" className="sendButton" onClick={ handleClick }>{ props.text }</button>
       );
     };
 
