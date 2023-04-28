@@ -290,42 +290,11 @@ div {
     background-image: url('./media/images/Tip_Menu_2.png');
 }
 
-.tipTypewriterLower{
-  position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-repeat:no-repeat;
-    background-attachment: fixed; 
-    background-image: url('./media/images/TipKeyboardLower.png');
-}
-
-.tipTypewriterUpper{
-  position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-repeat:no-repeat;
-    background-attachment: fixed; 
-    background-image: url('./media/images/TipKeyboardUpper.png');
-}
-.overlayTipTypewriter{
-  position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-repeat:no-repeat;
-    background-attachment: fixed; 
-    background-image: url('./media/images/TipBox.png');
-}
 
 
 .ableismusButton{
   position: absolute;
-  top: 240px;
+  top: 100px;
   left: 80px;
   width: 400px;
   height: 340px;
@@ -341,7 +310,7 @@ div {
 }
 .demokratiefeindlichButton{
   position: absolute;
-  top: 540px;
+  top: 500px;
   left: 90px;
   width: 400px;
   height: 340px;
@@ -373,8 +342,8 @@ div {
 }
 .hassImNetzButton{
   position: absolute;
-  top: 1190px;
-  left: 600px;
+  top: 540px;
+  left: 1450px;
   width: 400px;
   height: 310px;
   outline: none;
@@ -389,8 +358,8 @@ div {
 }
 .queerfeindlichButton{
   position: absolute;
-  top:930px;
-  left: 610px;
+  top:330px;
+  left: 1310px;
   width: 400px;
   height: 280px;
   outline: none;
@@ -403,26 +372,11 @@ div {
   -webkit-animation-fill-mode: both; 
   animation-fill-mode: both; 
 }
+
 .radikalisierungButton{
   position: absolute;
   top:260px;
-  left: 610px;
-  width: 400px;
-  height: px;
-  outline: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-image: url('./media/images/Radikalisierung.png');
-  border: 0px solid rgb(250, 250, 250);
-  -webkit-animation: 4s steps(12) infinite;
-  animation: 4s steps(12) infinite;
-  -webkit-animation-fill-mode: both; 
-  animation-fill-mode: both; 
-}
-.radikalisierungButton{
-  position: absolute;
-  top:260px;
-  left: 610px;
+  left: 490px;
   width: 400px;
   height: 340px;
   outline: none;
@@ -437,8 +391,8 @@ div {
 }
 .rechteGewaltButton{
   position: absolute;
-  top: 1130px;
-  left: 110px;
+  top: 400px;
+  left: 880px;
   width: 400px;
   height: 310px;
   outline: none;
@@ -453,8 +407,8 @@ div {
 }
 .sexismusButton{
   position: absolute;
-  top: 910px;
-  left: 110px;
+  top: 110px;
+  left: 910px;
   width: 400px;
   height: 300px;
   outline: none;
@@ -469,8 +423,8 @@ div {
 }
 .sozialeAusgrenzungButton{
   position: absolute;
-  top: 1410px;
-  left: 170px;
+  top: 710px;
+  left: 970px;
   width: 400px;
   height: 280px;
   outline: none;
@@ -500,12 +454,12 @@ div {
 
 .explanationDisplay {
   position: absolute;
-  top: 325px;
+  top: 100px;
   left: 80px;
   display: flex;
   justify-content: center;
-  width: 910px;
-  height: 1193px;
+  width: 1765px;
+  height: 870px;
   resize: none;
   padding: .5rem;
   outline: none;
@@ -555,8 +509,8 @@ div {
 
 .closeButton{
   position: absolute;
-  top: 10px;
-  left: 850px;
+  top: 4px;
+  left: 1700px;
   width: 200px;
   height: 230px;
   outline: none;
@@ -568,8 +522,8 @@ div {
 
 .printButton{
   position: absolute;
-  top: 1440px;
-  left: 370px;
+  top: 850px;
+  left: 1230px;
   width: 500px;
   height: 330px;
   outline: none;
@@ -581,8 +535,8 @@ div {
 
 .tipButton{
   position: absolute;
-  top: 1390px;
-  left: 670px;
+  top: 830px;
+  left: 1560px;
   width: 500px;
   height: 330px;
   outline: none;
@@ -592,10 +546,42 @@ div {
   border: 0px solid rgb(250, 250, 250);
 }
 
+.tipTypewriterLower{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipKeyboardLowerQuer.png');
+}
+
+.tipTypewriterUpper{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipKeyboardUpperQuer.png');
+}
+.overlayTipTypewriter{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/TipBoxQuer.png');
+}
+
 .sendButton{
   position: absolute;
-  top: 280px;
-  left: 680px;
+  top: 180px;
+  left: 1020px;
   width: 300px;
   height: 230px;
   outline: none;
@@ -644,8 +630,8 @@ background-color: rgb(238, 115, 48);
 
 .keyboardBubbles {
   position: absolute;
-  top: 1160px;
-  left: 25px;
+  top: 640px;
+  left: 443px;
   display: grid;
   place-items: center;
   min-height: 80px;
@@ -657,7 +643,7 @@ background-color: rgb(238, 115, 48);
   background-color: transparent;
   border: none;
   display: inline-block;
-  margin: 7px 9px;
+  margin: 7px 10px;
   font-size: 3rem;
   color: transparent;
   width: 51px;
@@ -741,12 +727,12 @@ background-color: rgb(238, 115, 48);
 
 .inputTextBubbles {
   position: absolute;
-  top: 730px;
-  left: 170px;
+  top: 310px;
+  left: 260px;
   display: flex;
   justify-content: center;
   background-color: transparent;
-  width: 730px;
+  width: 1400px;
   height: 380px;
   resize: none;
   padding: .5rem;
@@ -762,8 +748,8 @@ background-color: rgb(238, 115, 48);
 
 .closeButtonGrey{
   position: absolute;
-  top: 450px;
-  left: 920px;
+  top: 110px;
+  left: 1650px;
   width: 200px;
   height: 230px;
   outline: none;

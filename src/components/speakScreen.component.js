@@ -357,7 +357,7 @@ const Onscreen  = () => {
       const handleClick = () => {
         console.log(props.text);
 
-        if (inputChars.length < 342){
+        if (inputChars.length < 462){
           inputChars.push(props.text)
           setInputText(inputChars.join(''))
           if (keyboardStatus == 'UPPER') setKeyboardStatus('LOWER')
