@@ -6,7 +6,7 @@ const categories = ["ABLEISMUS", "DEMOKRATIEFEINDLICH", "DISKRIMINIERUNG", "HASS
 
 
 const TipsList = () => {
-  const [tips, setTip] = useState([]);
+  const [tips, setTips] = useState([]);
   const [currentTip, setCurrentTip] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [searchCreator, setSearchCreator] = useState("");
@@ -46,8 +46,8 @@ const TipsList = () => {
     TipDataService.findTipsByCategory(category)
     //TipDataService.getAllTips()
       .then(response => {
-        setTip(response.data);
-        console.log(response.data);
+        setTips(response.data);
+        console.log('TIPS: ',response.data, ' CATEGORY:', category);
         //refreshList()
       })
       .catch(e => {
@@ -58,7 +58,7 @@ const TipsList = () => {
 
 
   const refreshList =  () => {
-    retrieveTips();
+    retrieveTips(currentCategory);
     setCurrentTip(null);
     setCurrentIndex(-1);
   };
