@@ -277,6 +277,244 @@ div {
   text-align: center;
 }
 
+/* Citations Orange */
+
+.citationlistitem{
+  width: 96px;
+  height: 30px;
+  margin: 2px 0px 2px 0px;
+  padding: 2px 0px 2px 5px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.contentbox{
+  max-width: 100%;
+  min-height: 50%;
+  overflow: hidden;
+}
+
+.someMargin{
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 30px;
+  width: 100px;
+  font-size: 1.1em;
+}
+
+.topMargin{
+  margin-top: 5px;
+
+}
+
+.inlineBlock{
+  display: inline-block
+}
+
+
+.black{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:black
+}
+.backgroundOrange{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/I2_Mensch_Screendesign_4.png');
+}
+
+.onscreenTypewriterLower{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/KeyboardLower.png');
+}
+
+.onscreenTypewriterUpper{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/KeyboardUpper.png');
+}
+.overlayTypewriter{
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-image: url('./media/images/KeyboardTextArea.png');
+}
+
+.citationButtonOrange{
+  position: absolute;
+  top: 1590px;
+  left: 150px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/Button_Kleiner.png');
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.enterButton{
+  position: absolute;
+  top: 250px;
+  left: 800px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/Button_Kleiner.png');
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.citationDisplayOrange {
+  position: absolute;
+  top: 572px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 910px;
+  height: 910px;
+  resize: none;
+  padding: .1rem;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
+  font-size: 5.3rem;
+  line-height: 85px;
+  color: rgb(254, 247, 237);
+  outline: none;
+  border: 0px solid rgb(254, 247, 237);
+  border-radius: 0.4rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.keyboard {
+  position: absolute;
+  top: 1410px;
+  left: 25px;
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  min-width: 1050px;
+  flex-direction: column;
+  align-items: center;
+}
+.keys {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 5px 7px;
+  font-size: 3rem;
+  color: transparent;
+  width: 71px;
+  height: 70px;
+}
+.delete {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 4px 4px;
+  font-size: 1rem;
+  color: transparent;
+  width: 163px;
+  height: 70px;
+}
+
+.shift{
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 4px 4px;
+  font-size: 1rem;
+  color: transparent;
+  width: 163px;
+  height: 70px;
+}
+.space {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin: 4px 4px;
+  font-size: 1rem;
+  color: transparent;
+  width: 460px;
+  height: 75px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.inputText {
+  position: absolute;
+  top: 1125px;
+  left: 90px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 910px;
+  height: 193px;
+  resize: none;
+  padding: .5rem;
+  font-size: 2rem;
+  outline: none;
+  border: 0px solid rgb(254, 247, 237);
+  border-radius: 0.4rem;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.shiftButton{
+  position: absolute;
+  top: 1590px;
+  left: 60px;
+  width: 200px;
+  height: 230px;
+  outline: none;
+  background-color: transparent;
+  background-image: url('./media/images/Button_Kleiner.png');
+  border: 0px solid rgb(250, 250, 250);
+}
+
+.scroll{ 
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+
 /* Bubbles */
 
 .backgroundBubbles{

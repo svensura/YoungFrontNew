@@ -8,7 +8,8 @@ import AuthService from "./services/auth.service";
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
-import Onscreen from "./components/onscreen.component";
+import OnscreenY from "./components/onscreenYellow.component";
+import OnscreenO from "./components/onscreenOrange.component";
 import SpeakScreen from "./components/speakScreen.component";
 import KnowScreen from "./components/knowScreen.component";
 import Profile from "./components/profile.component";
@@ -91,8 +92,13 @@ class App extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/onscreen"} className="nav-link">
-                OnscreenCitations
+              <Link to={"/onscreenY"} className="nav-link">
+                OnscreenCitationsY
+              </Link>
+            </li> 
+            <li className="nav-item">
+              <Link to={"/onscreenO"} className="nav-link">
+                OnscreenCitationsO
               </Link>
             </li> 
             <li className="nav-item">
@@ -192,7 +198,8 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/onscreen" element={<Onscreen />} />
+            <Route path="/onscreenY" element={<OnscreenY />} />
+            <Route path="/onscreenO" element={<OnscreenO />} />
             <Route path="/speakScreen" element={<SpeakScreen />} />
             <Route path="/knowScreen" element={<KnowScreen />} />
             <Route path="/login" element={<Login />} />
