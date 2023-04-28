@@ -9,7 +9,7 @@ import SchariaText from '../media/text/SchariaText.js';
 import VölkermordText from '../media/text/VölkermordText.js';
 import TransfeindlichkeitText from '../media/text/TransfeindlichkeitText.js';
 import AntizigianismusText from '../media/text/AntizigianismusText.js';
-import VerschwörungsideologienText from '../media/text/VerschwörungsideologienText.js';
+import VerschwörungsideologienText from '../media/text/VerschwoerungsideologienText.js';
 import IslamismusText from '../media/text/IslamismusText.js';
 import AntisemitismusText from '../media/text/AntisemitismusText.js';
 import HolocaustText from '../media/text/HolocaustText.js';
@@ -211,10 +211,10 @@ const Onscreen  = () => {
         text = SchariaText
         break
       case 'VÖLKERMORD':
-        text = KalifatText
+        text = VölkermordText
           break
       case 'TRANSFEINDLICHKEIT':
-        text = VölkermordText
+        text = TransfeindlichkeitText
           break
       case 'ANTIZIGIANISMUS':
         text = AntizigianismusText
