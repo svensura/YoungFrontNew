@@ -3,15 +3,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import AbleismusText from '../media/text/AbleismusText';
-import DemokratiefeindlichText from '../media/text/DemokratiefeindlichText.js';
-import DiskriminierungText from '../media/text/DiskriminierungText.js';
-import HassImNetzText from '../media/text/HassImNetzText.js';
-import QueerfeindlichText from '../media/text/QueerfeindlichText.js';
-import RechteGewaltText from '../media/text/RechteGewaltText.js';
-import RadikalisierungText from '../media/text/RadikalisierungText.js';
-import SexismusText from '../media/text/SexismusText.js';
-import SozialeAusgrenzungText from '../media/text/SozialeAusgrenzungText.js';
 import TipDataService from "../services/TipDataService";
 
 

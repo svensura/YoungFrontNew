@@ -1,0 +1,5 @@
+const mytext = `Neue Rechte ist eine Sammelbezeichnung, mit dem Ziel, sich von der „alten Rechten” abzugrenzen. Dabei sind Unterschiede zum klassischen Rechtsextremismus verschwindend gering.
+Vertreter:innen der „neuen Rechten” berufen sich auf die „Konservative Revolution”, also auf rechtsnationale Intellektuelle aus der Zeit der Weimarer Republik, die als Vordenker:innen des Nationalsozialismus gelten. Sie wollen die Errungenschaften liberaler Gesellschaften abschaffen. Dabei machen sie sich genau diese zunutze, um Räume für sich zu beanspruchen. Sie brechen gezielt vermeintliche gesellschaftliche Tabus und nutzen so die Meinungsfreiheit, um Rassismus, LGBTQIA+-Feindlichkeit und Antisemitismus zu normalisieren. Dabei steht die „neue” ebenso wie die „alte” Rechte für Flüchtlingsfeindlichkeit, Antifeminismus, Islamfeindlichkeit, Homo- und Trans*-Feindlichkeit und ist in Teilen antisemitisch. 
+`;
+
+export default mytext ;

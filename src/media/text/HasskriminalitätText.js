@@ -1,0 +1,5 @@
+const mytext = `Unter Hasskriminalität werden Straftaten erfasst, die durch Vorurteile motiviert sind. Dazu gehört sowohl körperliche und psychische Gewalt wie auch Vandalismus gegen Orte, die für die betroffenen Gruppen sehr wichtig sind. 
+Der Begriff Hasskriminalität entstand in den USA. Dort erreichten in den 1980er Jahren Aktivist:innen, dass Straftaten gegen historisch diskriminierte Gruppen schärfer verurteilt werden. In Deutschland wurde 2015 beschlossen, die Perspektive der Betroffenen stärker zu berücksichtigen und höhere Strafen zu verhängen, wenn menschenverachtende Beweggründe nachgewiesen werden können. Im Jahr 2021 wurde das Gesetz erweitert, unter anderem um Bedrohungen im Internet. Hasskriminalität sendet immer auch eine Botschaft an die Betroffenen, an Gruppen, denen sie vermeintlich angehören, und die Gesellschaft als Ganze. Es geht den Täter:innen darum, Angst zu verbreiten und gesellschaftliche Gruppen auszugrenzen oder Privilegien zu verteidigen.
+`;
+
+export default mytext ;

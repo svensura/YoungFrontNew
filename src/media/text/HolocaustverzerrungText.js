@@ -1,0 +1,5 @@
+const mytext = `Unter einer Verzerrung des Holocaust werden Äußerungen verstanden, die die bekannten historischen Fakten entschuldigen, verharmlosen oder falsch darstellen. 
+Die Verzerrung leugnet zwar nicht die Fakten des Holocaust an sich, entschuldigt oder minimiert jedoch die Zahl der Opfer, stellt Fakten falsch dar oder relativiert seine Bedeutung. Dies erfolgt heute vor allem in den Sozialen Medien und ist im Unterschied zur Holocaust-Leugnung schwerer zu erkennen. Während der Corona-Pandemie verglichen sich Demonstrant:innen mit den jüdischen Opfern des Holocaust. In anderen Fällen wird der Begriff Holocaust verwendet, um öffentlich drastisch auf bestimmte gesellschaftliche Fragen hinzuweisen, wie etwa „Klima-Holocaust“, „Abtreibungsholocaust“ oder „Bomben-Holocaust“. Jede Verzerrung, ob absichtlich oder unabsichtlich, nährt Antisemitismus und kann zu Gewalt gegenüber Juden und Jüdinnen führen.
+`;
+
+export default mytext ;

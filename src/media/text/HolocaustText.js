@@ -1,0 +1,5 @@
+const mytext = `Der Völkermord an den europäischen Jüdinnen und Juden während des Nationalsozialismus wird als Holocaust (aus dem Griechischen, ‘Brandopfer’) oder Schoah bezeichnet. Schoah ist hebräisch und bedeutet „Unheil“ und „große Katastrophe“.
+Mit der Machtübernahme der Nationalsozialist:innen 1933 begann die Demütigung, Entrechtung und Verfolgung der jüdischen Bevölkerung in Deutschland und in allen von Deutschen besetzten europäischen Ländern. Juden:Jüdinnen wurden zunehmend durch Gesetze und Verordnungen ausgeschlossen. Es folgten die Einweisung in örtliche Konzentrationslager und schließlich die Deportation in die deutschen Vernichtungslager in Polen. Ab Sommer 1941 begannen die Massenerschießungen von Jüdinnen:Juden. Der industriell organisierte Massenmord erfolgte dann in den Gaskammern der Vernichtungslager Auschwitz, Treblinka, Sobibor, Belzec und Chelmno.  Mindestens sechs Millionen Juden:Jüdinnen wurden in dieser Zeit ermordet.
+`;
+
+export default mytext ;

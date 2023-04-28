@@ -1,0 +1,5 @@
+const mytext = `Erinnerung lässt sich beschreiben als Umgang einer Person oder Gruppe mit der Vergangenheit, bei der diese vor dem Vergessen bewahrt wird. Die verschiedenen Umgangsformen einer Gesellschaft mit ihrer Geschichte, ihr Zusammenspiel und ihre Widersprüche, werden Erinnerungskultur genannt. 
+Ob auf Personen, Orte oder Ereignisse: Erinnerung kann sich auf alles richten, was in der Vergangenheit liegt. Genauso vielseitig wie das Erinnerte sind auch die verschiedenen Formen des Erinnerns. Obwohl die Erinnerung an den Holocaust in der deutschen Erinnerungskultur inzwischen sehr zentral ist, musste sie über Jahrzehnte erkämpft und noch immer gegen starke Widerstände aufrechterhalten werden. Erinnerung ist also weder sicher noch konfliktfrei. Auch die Toleranzräume erinnern an Personen und Ereignisse aus der Geschichte und sind damit ein Teil der deutschen Erinnerungskultur. 
+`;
+
+export default mytext ;
