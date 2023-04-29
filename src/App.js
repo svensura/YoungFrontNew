@@ -83,7 +83,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
-            CitModTool
+            TolScreens
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
