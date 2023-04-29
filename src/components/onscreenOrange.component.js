@@ -265,7 +265,7 @@ const Onscreen  = () => {
   }, [navigate]);
 
   return (
-    <div className="black">
+    <div>
       <div className="backgroundOrange"></div>
       {(onscreenStatus == 'CITATIONS') ? <Citation/> : <Typewriter/>}
     </div>   
