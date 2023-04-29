@@ -167,12 +167,12 @@ const Onscreen  = () => {
     );
   };
 
- let onscreensStatusNames = Object.keys(OnscreenStatus);
- onscreensStatusNames.shift()
+ let onscreenStatusNames = Object.keys(OnscreenStatus);
+ onscreenStatusNames.shift()
 
-  console.log('NAMES:', onscreensStatusNames)
+  console.log('NAMES:', onscreenStatusNames)
 
-  const ItemList = onscreensStatusNames.map(function(name, index){
+  const ItemList = onscreenStatusNames.map(function(name, index){
     return <li className="sub"> <ButtonComponent text={name} index={index}/></li>;
   })
  
