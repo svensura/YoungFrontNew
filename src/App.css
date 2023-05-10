@@ -1025,12 +1025,12 @@ background-color: rgb(238, 115, 48);
 
 .knowledgeDisplay {
   position: absolute;
-  top: 200px;
-  left: 0px;
+  top: 50px;
+  left: -400px;
   display: flex;
   justify-content: center;
   background-color: transparent;
-  width: 1920px;
+  width: 2620px;
   height: 1080x;
   resize: none;
   padding: 1rem;
@@ -1038,9 +1038,6 @@ background-color: rgb(238, 115, 48);
   font-style: normal;
   font-weight: bold;
   src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
-  font-size: 5rem;
-  letter-spacing: 0.05em;
-  line-height: 60px;
   color: rgb(254, 247, 237);
   outline: none;
   border: 0px solid rgb(254, 247, 237);
@@ -1049,6 +1046,253 @@ background-color: rgb(238, 115, 48);
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
 
+}
+
+.sub{
+  font-size: 6rem;
+  letter-spacing: 0.05em;
+  line-height: 70px;
+
+}
+
+
+@keyframes swingLines0 { 
+  0%   {left:-300px;}
+  50%  {left:300px;}
+  100% {left:-300px;}
+}
+.line0{
+  position: relative;
+  animation-name: swingLines0;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines1 { 
+  0%   {left:-300px;}
+  50%  {left:300px;}
+  100% {left:-300px;}
+}
+.line1{
+  position: relative;
+  animation-name: swingLines1;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines2 { 
+  0%   {left:-300px;}
+  50%  {left:300px;}
+  100% {left:-300px;}
+}
+.line2{
+  position: relative;
+  animation-name: swingLines1;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines3 { 
+  0%   {left:100px;}
+  50%  {left:-100px;}
+  100% {left:100px;}
+}
+.line3{
+  position: relative;
+  animation-name: swingLines3;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines4 { 
+  0%   {left:100px;}
+  50%  {left:-100px;}
+  100% {left:100px;}
+}
+.line4{
+  position: relative;
+  animation-name: swingLines4;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines5 { 
+  0%   {left:-100px;}
+  50%  {left:100px;}
+  100% {left:-100px;}
+}
+.line5{
+  position: relative;
+  animation-name: swingLines5;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines6 { 
+  0%   {left:650px;}
+  50%  {left:-150px;}
+  100% {left:650px;}
+}
+.line6{
+  position: relative;
+  animation-name: swingLines6;
+  animation-duration: 38s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines7 { 
+  0%   {left:650px;}
+  50%  {left:-150px;}
+  100% {left:650px;}
+}
+.line7{
+  position: relative;
+  animation-name: swingLines7;
+  animation-duration: 38s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines8 { 
+  0%   {left:-100px;}
+  50%  {left:100px;}
+  100% {left:-100px;}
+}
+.line8{
+  position: relative;
+  animation-name: swingLines8;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines9 { 
+  0%   {left:-100px;}
+  50%  {left:100px;}
+  100% {left:-100px;}
+}
+.line9{
+  position: relative;
+  animation-name: swingLines9;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines10 { 
+  0%   {left:650px;}
+  50%  {left:-350px;}
+  100% {left:650px;}
+}
+.line10{
+  position: relative;
+  animation-name: swingLines10;
+  animation-duration: 58s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines11 { 
+  0%   {left:650px;}
+  50%  {left:-350px;}
+  100% {left:650px;}
+}
+.line11{
+  position: relative;
+  animation-name: swingLines11;
+  animation-duration: 58s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines12 { 
+  0%   {left:-300px;}
+  50%  {left:300px;}
+  100% {left:-300px;}
+}
+.line12{
+  position: relative;
+  animation-name: swingLines12;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines13 { 
+  0%   {left:-300px;}
+  50%  {left:300px;}
+  100% {left:-300px;}
+}
+.line13{
+  position: relative;
+  animation-name: swingLines13;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines14 { 
+  0%   {left:300px;}
+  50%  {left:-300px;}
+  100% {left:300px;}
+}
+.line14{
+  position: relative;
+  animation-name: swingLines14;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines15 { 
+  0%   {left:250px;}
+  50%  {left:-250px;}
+  100% {left:250px;}
+}
+.line15{
+  position: relative;
+  animation-name: swingLines15;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes swingLines16 { 
+  0%   {left:250px;}
+  50%  {left:-250px;}
+  100% {left:250px;}
+}
+.line16{
+  position: relative;
+  animation-name: swingLines16;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines17 { 
+  0%   {left:100px;}
+  50%  {left:-100px;}
+  100% {left:100px;}
+}
+.line17{
+  position: relative;
+  animation-name: swingLines17;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines18 { 
+  0%   {left:100px;}
+  50%  {left:-100px;}
+  100% {left:100px;}
+}
+.line18{
+  position: relative;
+  animation-name: swingLines18;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swingLines19 { 
+  0%   {left:300px;}
+  50%  {left:-300px;}
+  100% {left:300px;}
+}
+.line19{
+  position: relative;
+  animation-name: swingLines19;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
 }
 
 .explanationKnowledgeDisplay {

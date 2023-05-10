@@ -34,22 +34,22 @@ const OnscreenStatus = {
   SCHARIA: 'SCHARIA',
   VÖLKERMORD: 'VÖLKERMORD',
   TRANSFEINDLICHKEIT: 'TRANSFEINDLICHKEIT',
-  ANTIZIGIANISMUS: 'ANTIZIGIANISMUS',
+  HOLOCAUST: 'HOLOCAUST',
   VERSCHWÖRUNGSIDEOLOGIEN: 'VERSCHWÖRUNGSIDEOLOGIEN',
   ISLAMISMUS: 'ISLAMISMUS',
   ANTISEMITISMUS: 'ANTISEMITISMUS',
-  HOLOCAUST: 'HOLOCAUST',
+  ANTIZIGIANISMUS: 'ANTIZIGIANISMUS',
+  ERINNERUNG: 'ERINNERUNG',
   REPARATIONEN: 'REPARATIONEN',
   HASSKRIMINALITÄT: 'HASSKRIMINALITÄT',
   ERINNERUNGSABWEHR: 'ERINNERUNGSABWEHR',
+  IS: 'iS',
   HOLOCAUSTLEUGNUNG: 'HOLOCAUSTLEUGNUNG',
-  ERINNERUNG: 'ERINNERUNG',
-  HOLOCAUSTVERZERRUNG: 'HOLOCAUSTVERZERRUNG',
   EMPOWERMENT: 'EMPOWERMENT',
   ANTIFEMINISMUS: 'ANTIFEMINISMUS',
   RECHTELANDNAHME: 'RECHTELANDNAHME',
   NEUERECHTE: 'NEUERECHTE',
-  IS: 'iS',
+  HOLOCAUSTVERZERRUNG: 'HOLOCAUSTVERZERRUNG',
 }
 
 
@@ -80,7 +80,7 @@ const Onscreen  = () => {
   console.log('NAMES:', onscreenStatusNames)
 
   const ItemList = onscreenStatusNames.map(function(name, index){
-    return <li className="sub"> <ButtonComponent text={name} index={index}/></li>;
+    return <li className="sub"> <div className={"line" + index}><ButtonComponent text={name} index={index}/></div></li>;
   })
  
 
@@ -252,24 +252,7 @@ const Onscreen  = () => {
     } 
   }, [navigate]);
 
-  //   return (
-  //     <div>
-        
-  //       {(() => {
-  //     switch(onscreenStatus) {
-  //     case 'BUBBLES':
-  //       return (
-  //         <div className="black">
-  //           <div className="background"></div>
-  //           <Bubbles/>
-  //         </div>   
-  //       )
-  //     default:
-  //       return null
-  //     }
-  //   })()}
-  //   </div>
-  // )
+
 
 
   return (
