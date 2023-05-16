@@ -395,6 +395,26 @@ div {
   border: 0px solid rgb(250, 250, 250);
 }
 
+.charsleft {
+    position: absolute;
+    top: 1320px;
+    left: 850px;
+    text-align: right;
+    color: rgb(254, 247, 237);
+    background-color: transparent;
+}
+
+.charsleftBubbles {
+  position: absolute;
+  top: 600px;
+  left: 1520px;
+  text-align: right;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+
+
+
 .citationDisplayOrange {
   position: absolute;
   top: 572px;

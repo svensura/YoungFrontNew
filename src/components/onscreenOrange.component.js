@@ -11,10 +11,7 @@ const OnscreenStatus = {
   TYPEWRITER: 'TYPEWRITER'
 }
 
-const KeyboardStatus = {
-  LOWER: 'LOWER',
-  UPPER: 'UPPER'
-}
+
 
 const Onscreen  = () => {
 
@@ -95,8 +92,15 @@ const Onscreen  = () => {
   let inputChars = []
   const Typewriter  = () => {
 
+    const KeyboardStatus = {
+      LOWER: 'LOWER',
+      UPPER: 'UPPER'
+    }
+    const maxChars = 150
+
     const [inputText, setInputText] = useState("")
     const [keyboardStatus, setKeyboardStatus] = useState([KeyboardStatus.UPPER])
+    const [charsLeft, setCharsLeft] = useState(maxChars)
     let timeout = 15000 // general screensaver-time 
     let typewriterTimeout 
 
@@ -124,9 +128,10 @@ const Onscreen  = () => {
     const ButtonComponent = (props) => {
       const handleClick = () => {
         console.log(props.text);
-        if (inputChars.length < 150){
+        if (charsLeft > 0){
           inputChars.push(props.text)
           setInputText(inputChars.join(''))
+          setCharsLeft(maxChars - inputChars.length)
           if (keyboardStatus == 'UPPER') setKeyboardStatus('LOWER')
           clearTimeout(typewriterTimeout)
         }
@@ -165,9 +170,10 @@ const Onscreen  = () => {
 
     const SpaceButtonComponent = (props) => {
       const handleClick = () => {
-        if (inputChars.length < 150){
+        if (charsLeft > 0){
           inputChars.push(' ')
           setInputText(inputChars.join(''))
+          setCharsLeft(maxChars - inputChars.length)
           console.log(props.text);
           clearTimeout(typewriterTimeout)
         }
@@ -193,6 +199,9 @@ const Onscreen  = () => {
     return (
       <div className="overlayTypewriter">
         <div className={(keyboardStatus == 'LOWER') ? "onscreenTypewriterLower" : "onscreenTypewriterUpper"}>
+          <div className="charsleft">
+            Noch {charsLeft} Zeichen
+          </div>
           <div className="textarea">
             <TextAreaComponent text={inputText}/>
           </div>
