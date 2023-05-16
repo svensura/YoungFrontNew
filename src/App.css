@@ -737,6 +737,7 @@ div {
   position: absolute;
   top: 10px;
   left: 0px;
+  filter: invert(100%) contrast(1.75);
 }
 
 .explanation {
@@ -746,13 +747,13 @@ div {
   display: flex;
   justify-content: left;
   padding: 1rem;
-  font-size: 1.7rem;
+  font-size: 2.7rem;
   font-family: 'Calibri';
   font-style: normal;
   font-weight: bold;
   src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
-  line-height: 30px;
-  color: rgb(0, 0, 0);
+  line-height: 40px;
+  color: rgb(254, 247, 237);
   overflow: hidden; /* Hide scrollbars */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -885,7 +886,7 @@ background-color: rgb(238, 115, 48);
 }
 
 .SOZIALEAUSGRENZUNG {
-  background-color: rgb(255, 239, 24);
+  background-color: rgb(54, 162, 43);
 }
 
 
