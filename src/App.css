@@ -737,7 +737,6 @@ div {
   position: absolute;
   top: 10px;
   left: 0px;
-  filter: invert(100%) contrast(1.75);
 }
 
 .explanation {
@@ -753,7 +752,6 @@ div {
   font-weight: bold;
   src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
   line-height: 40px;
-  color: rgb(254, 247, 237);
   overflow: hidden; /* Hide scrollbars */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -855,38 +853,47 @@ div {
 
 .ABLEISMUS {
 background-color: rgb(166, 204, 198);
+color: rgb(254, 247, 237);
 }
 
 .DEMOKRATIEFEINDLICH {
   background-color: rgb(93, 88, 146);
+  color: rgb(254, 247, 237);
 }
 
 .DISKRIMINIERUNG {
   background-color: rgb(251, 190, 93);
+  color: rgb(254, 247, 237);
 }
 
 .HASSIMNETZ {
   background-color: rgb(82, 136, 198);
+  color: rgb(254, 247, 237);
 }
 
 .QUEERFEINDLICH {
 background-color: rgb(238, 115, 48);
+color: rgb(254, 247, 237);
 }
 
 .RADIKALISIERUNG {
   background-color: rgb(82, 136, 198);
+  color: rgb(254, 247, 237);
 }
 
 .RECHTEGEWALT {
   background-color: rgb(96, 190, 175);
+  color: rgb(254, 247, 237);
 }
 
 .SEXISMUS {
   background-color: rgb(234, 80, 83);
+  color: rgb(254, 247, 237);
 }
 
 .SOZIALEAUSGRENZUNG {
-  background-color: rgb(54, 162, 43);
+  background-color: rgb(255, 239, 24);
+  color: rgb(0, 0, 0);
 }
 
 
@@ -1085,7 +1092,7 @@ background-color: rgb(238, 115, 48);
 .line0{
   position: relative;
   animation-name: swingLines0;
-  animation-duration: 35s;
+  animation-duration: 55s;
   animation-iteration-count: infinite;
 }
 
@@ -1097,7 +1104,7 @@ background-color: rgb(238, 115, 48);
 .line1{
   position: relative;
   animation-name: swingLines1;
-  animation-duration: 35s;
+  animation-duration: 55s;
   animation-iteration-count: infinite;
 }
 
@@ -1109,7 +1116,7 @@ background-color: rgb(238, 115, 48);
 .line2{
   position: relative;
   animation-name: swingLines1;
-  animation-duration: 35s;
+  animation-duration: 55s;
   animation-iteration-count: infinite;
 }
 
@@ -1121,7 +1128,7 @@ background-color: rgb(238, 115, 48);
 .line3{
   position: relative;
   animation-name: swingLines3;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
 }
 
@@ -1133,7 +1140,7 @@ background-color: rgb(238, 115, 48);
 .line4{
   position: relative;
   animation-name: swingLines4;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
 }
 
@@ -1145,7 +1152,7 @@ background-color: rgb(238, 115, 48);
 .line5{
   position: relative;
   animation-name: swingLines5;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
 }
 
@@ -1157,7 +1164,7 @@ background-color: rgb(238, 115, 48);
 .line6{
   position: relative;
   animation-name: swingLines6;
-  animation-duration: 38s;
+  animation-duration: 58s;
   animation-iteration-count: infinite;
 }
 
@@ -1169,7 +1176,7 @@ background-color: rgb(238, 115, 48);
 .line7{
   position: relative;
   animation-name: swingLines7;
-  animation-duration: 38s;
+  animation-duration: 58s;
   animation-iteration-count: infinite;
 }
 
@@ -1181,7 +1188,7 @@ background-color: rgb(238, 115, 48);
 .line8{
   position: relative;
   animation-name: swingLines8;
-  animation-duration: 16s;
+  animation-duration: 36s;
   animation-iteration-count: infinite;
 }
 
@@ -1193,7 +1200,7 @@ background-color: rgb(238, 115, 48);
 .line9{
   position: relative;
   animation-name: swingLines9;
-  animation-duration: 16s;
+  animation-duration: 36s;
   animation-iteration-count: infinite;
 }
 
@@ -1205,7 +1212,7 @@ background-color: rgb(238, 115, 48);
 .line10{
   position: relative;
   animation-name: swingLines10;
-  animation-duration: 58s;
+  animation-duration: 78s;
   animation-iteration-count: infinite;
 }
 
@@ -1217,7 +1224,7 @@ background-color: rgb(238, 115, 48);
 .line11{
   position: relative;
   animation-name: swingLines11;
-  animation-duration: 58s;
+  animation-duration: 78s;
   animation-iteration-count: infinite;
 }
 
@@ -1229,7 +1236,7 @@ background-color: rgb(238, 115, 48);
 .line12{
   position: relative;
   animation-name: swingLines12;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
 }
 
@@ -1241,7 +1248,7 @@ background-color: rgb(238, 115, 48);
 .line13{
   position: relative;
   animation-name: swingLines13;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
 }
 
@@ -1253,7 +1260,7 @@ background-color: rgb(238, 115, 48);
 .line14{
   position: relative;
   animation-name: swingLines14;
-  animation-duration: 40s;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
 }
 
@@ -1265,7 +1272,7 @@ background-color: rgb(238, 115, 48);
 .line15{
   position: relative;
   animation-name: swingLines15;
-  animation-duration: 20s;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
 }
 @keyframes swingLines16 { 
@@ -1276,7 +1283,7 @@ background-color: rgb(238, 115, 48);
 .line16{
   position: relative;
   animation-name: swingLines16;
-  animation-duration: 20s;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
 }
 
@@ -1288,7 +1295,7 @@ background-color: rgb(238, 115, 48);
 .line17{
   position: relative;
   animation-name: swingLines17;
-  animation-duration: 20s;
+  animation-duration: 50s;
   animation-iteration-count: infinite;
 }
 
@@ -1300,7 +1307,7 @@ background-color: rgb(238, 115, 48);
 .line18{
   position: relative;
   animation-name: swingLines18;
-  animation-duration: 20s;
+  animation-duration: 50s;
   animation-iteration-count: infinite;
 }
 
@@ -1312,7 +1319,7 @@ background-color: rgb(238, 115, 48);
 .line19{
   position: relative;
   animation-name: swingLines19;
-  animation-duration: 25s;
+  animation-duration: 45s;
   animation-iteration-count: infinite;
 }
 
