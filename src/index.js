@@ -8,11 +8,15 @@ import App from "./App";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
-window.addEventListener('touchstart', function(e) {
-  if (e.targetTouches.length === 2) {
-    e.preventDefault();
-  }
-}, false);
+// window.addEventListener('touchstart', function(e) {
+//   if (e.targetTouches.length === 2) {
+//     e.preventDefault();
+//   }
+// }, false);
+
+document.addEventListener('touchstart', function(event){
+  event.preventDefault();
+}, {passive: false});
 
 root.render(
   <BrowserRouter>
