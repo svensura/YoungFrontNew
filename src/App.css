@@ -103,7 +103,7 @@ div {
     height: 1920px;
     background-repeat:no-repeat;
     background-attachment: fixed; 
-    background-image: url('./media/images/I2_Mensch_Screendesign_3_Full_HD.png');
+    background-image: url('./media/images/Zitate_BG_Gelb.png');
     overflow: hidden;
 }
 
@@ -340,7 +340,7 @@ div {
     height: 1920px;
     background-repeat:no-repeat;
     background-attachment: fixed; 
-    background-image: url('./media/images/I2_Mensch_Screendesign_4_Full_HD.png');
+    background-image: url('./media/images/Zitate_BG_Orange.png');
 }
 
 .onscreenTypewriterLower{
