@@ -201,6 +201,10 @@ const Onscreen  = () => {
 
     let timeout = 60000 // general screensaver-time 
     let explainTimeout 
+    let tipNo = 0
+
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
 
     const restartTimeout = () => {
       clearTimeout(explainTimeout);
@@ -213,17 +217,24 @@ const Onscreen  = () => {
     }
 
     useEffect(() => {
-      clearTimeout(explainTimeout)
       restartTimeout()
     }, [restartTimeout, explainTimeout]);
 
     console.log('STATUS: ' + onscreenStatus);
 
-    const getTip  = () => {
+    const nextTip  = (tipNo) => {
       TipDataService.getCatTips(onscreenStatus)
       .then(response => {
-        console.log("CONTENT: ",response.data[0].content)
-        setTip(response.data[0].content)
+        console.log("DATA: ",response.data)
+        console.log(tipNo, response.data.length)
+        if (tipNo  < response.data.length){
+          console.log("CONTENT: ",response.data[tipNo].content)
+          setTip(response.data[tipNo].content)
+          restartTimeout()
+        } else {
+          clearTimeout(explainTimeout);
+          setOnscreenStatus('BUBBLES')
+        } 
       })
       .catch(e => {
         //console.log(e);#
@@ -233,7 +244,8 @@ const Onscreen  = () => {
 
     useEffect(() => {
       
-    getTip()
+    nextTip(tipNo)
+    restartTimeout()
 
     }, []);
 
@@ -274,6 +286,20 @@ const Onscreen  = () => {
       );
     };
 
+    const NextButtonComponent = () => {
+      const handleClick = () => {
+        tipNo++
+        console.log('NEXT TIP', tipNo);
+        clearTimeout(explainTimeout);
+        nextTip(tipNo)
+        
+      };
+
+      return (
+        <button type="button" className="nextButton" onClick={ handleClick }></button>
+      );
+    };
+
 
     return (
       <div>
@@ -288,6 +314,7 @@ const Onscreen  = () => {
       </div>
       <PrintButtonComponent/>
       <TipButtonComponent/>
+      <NextButtonComponent/>
       </div>
     )
 
@@ -309,6 +336,9 @@ const Onscreen  = () => {
     const [charsLeft, setCharsLeft] = useState(maxChars)
     let timeout = 30000 // general screensaver-time 
     let typewriterTimeout 
+
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
     
 
     const restartTimeout = () => {

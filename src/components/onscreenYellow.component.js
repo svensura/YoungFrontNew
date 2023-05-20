@@ -104,6 +104,9 @@ const Onscreen  = () => {
     let timeout = 15000 // general screensaver-time 
     let typewriterTimeout 
 
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
+
 
     const restartTimeout = () => {
       clearTimeout(typewriterTimeout);
