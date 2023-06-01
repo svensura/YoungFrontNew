@@ -198,10 +198,11 @@ const Onscreen  = () => {
   const Explain  = () => {
 
     const [tip, setTip] = useState("")
+    const [tipNo, setTipNo] = useState(0)
 
     let timeout = 60000 // general screensaver-time 
     let explainTimeout 
-    let tipNo = 0
+ 
 
     var noofTimeOuts = setTimeout( function(){});
     for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
@@ -226,7 +227,7 @@ const Onscreen  = () => {
       TipDataService.getCatTips(onscreenStatus)
       .then(response => {
         console.log("DATA: ",response.data)
-        console.log(tipNo, response.data.length)
+        console.log("TIPNUMBER: ",tipNo, "LENGTH: ",response.data.length)
         if (tipNo  < response.data.length){
           console.log("CONTENT: ",response.data[tipNo].content)
           setTip(response.data[tipNo].content)
@@ -244,6 +245,9 @@ const Onscreen  = () => {
 
     useEffect(() => {
       
+    setTipNo(tipNo + 1)
+    console.log('NEXT TIP', tipNo);
+    clearTimeout(explainTimeout);
     nextTip(tipNo)
     restartTimeout()
 
@@ -288,7 +292,7 @@ const Onscreen  = () => {
 
     const NextButtonComponent = () => {
       const handleClick = () => {
-        tipNo++
+        setTipNo(tipNo + 1)
         console.log('NEXT TIP', tipNo);
         clearTimeout(explainTimeout);
         nextTip(tipNo)
@@ -312,7 +316,7 @@ const Onscreen  = () => {
             {tip}
           </div>
       </div>
-      <PrintButtonComponent/>
+    
       <TipButtonComponent/>
       <NextButtonComponent/>
       </div>
