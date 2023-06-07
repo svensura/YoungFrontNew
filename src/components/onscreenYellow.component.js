@@ -82,6 +82,7 @@ const Onscreen  = () => {
      <div>
         <div className="citationDisplay">{citation}</div>
         <Button/>
+        <div className="citationHint">Hinterlasse dein Zitat</div>
       </div>
       
     )

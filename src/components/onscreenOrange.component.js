@@ -28,7 +28,7 @@ const Onscreen  = () => {
 
     return (
       <button type="button" className="citationButtonOrange" onClick={onClick}>
-      </button>
+      </button>  
     );
   
   };
@@ -83,6 +83,7 @@ const Onscreen  = () => {
      <div>
         <div className="citationDisplayOrange">{citation}</div>
         <Button/>
+        <div className="citationHintOrange">Hinterlasse dein Zitat</div>
       </div>
       
     )

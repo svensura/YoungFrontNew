@@ -136,6 +136,25 @@ div {
     background-attachment: fixed; 
     background-image: url('./media/images/KeyboardTextArea.png');
 }
+.citationHint{
+  position: absolute;
+  top: 1672px;
+  left: 120px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 910px;
+  height: 910px;
+  resize: none;
+  padding: .1rem;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
+  font-size: 4.1rem;
+  line-height: 85px;
+  color: rgb(254, 247, 237);
+}
 
 .citationButton{
   position: absolute;
@@ -341,6 +360,26 @@ div {
     background-image: url('./media/images/Zitate_BG_Orange.png');
 }
 
+.citationHintOrange{
+  position: absolute;
+  top: 1672px;
+  left: 220px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 910px;
+  height: 910px;
+  resize: none;
+  padding: .1rem;
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DroidSans'), url('./media/fonts/DroidSans-Bold.ttf');
+  font-size: 4.1rem;
+  line-height: 85px;
+  color: rgb(254, 247, 237);
+}
+
 .onscreenTypewriterLower{
   position: absolute;
     top: 0px;
@@ -384,6 +423,7 @@ div {
   background-image: url('./media/images/Button_Kleiner.png');
   border: 0px solid rgb(250, 250, 250);
 }
+
 
 .enterButton{
   position: absolute;
