@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TipDataService from "../services/TipDataService";
-
+import ClickDataService from "../services/ClickDataService";
 
 const OnscreenStatus = {
   BUBBLES: 'BUBBLES',
@@ -35,6 +35,7 @@ const Onscreen  = () => {
   const AbleismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("TEST1")
       setOnscreenStatus('ABLEISMUS')
     }
     return (
