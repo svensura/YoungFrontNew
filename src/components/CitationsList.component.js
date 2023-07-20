@@ -113,7 +113,7 @@ const CitationsList = () => {
       </div>
       <div className="col-md-6" >
         <h4 className="inlineBlock">Citations List</h4>
-          <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={refreshList}>
+          <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={() => refreshList}>
                RELOAD 
           </button>
           <div>
@@ -164,10 +164,10 @@ const CitationsList = () => {
             <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: currentCitation.checked > 0 ? 'Red' : 'Green'}} onClick={() => changeChecked()}>
               {currentCitation.checked ? "IGNORE " : " ALLOW"}
             </button>
-            <button className="badge badge-warning someMargin" onClick={updateCitation}>
+            <button className="badge badge-warning someMargin" onClick={() => updateCitation()}>
               UPDATE
             </button>
-            <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: 'Red'}} onClick={deleteCitation}>
+            <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: 'Red'}} onClick={() => deleteCitation()}>
                DELETE 
             </button>
           </div>

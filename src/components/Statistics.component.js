@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 import ClickDataService from "../services/ClickDataService";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //const categories = ["ABLEISMUS", "DEMOKRATIEFEINDLICH", "DISKRIMINIERUNG", "HASSIMNETZ", "QUEERFEINDLICH", "RADIKALISIERUNG", "RECHTEGEWALT", "SEXISMUS", "SOZIALEAUSGRENZUNG"];
+
 
 
 const ClicksList = () => {
@@ -16,8 +18,9 @@ const ClicksList = () => {
     console.log('USE_EFFECT')
     retrieveClicks();
   }, []);
-  //const navigate = useNavigate();
-
+  
+  const navigate = useNavigate();
+  const tableRef = useRef(null);
 
   // const updateTip = () => {
   //   TipDataService.updateTip(currentTip._id, currentTip)
@@ -41,6 +44,18 @@ const ClicksList = () => {
   //     });
   // };
 
+  const resetClicks  = itemName => {
+    console.log('RESET ITEM:', itemName)
+    ClickDataService.resetClicks(itemName)
+      .then(response => {
+        console.log('CLICKS RESET: ',response.data);
+        retrieveClicks()
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+
 
   const retrieveClicks  = () => {
     ClickDataService.getAllClicks()
@@ -53,6 +68,7 @@ const ClicksList = () => {
         console.log(e);
       });
   };
+
 
 
 
@@ -109,18 +125,34 @@ const ClicksList = () => {
       <div className="col-md-8">
      
       </div>
+        
         <div className="col-md-6" >
           <h4 className="inlineBlock">Amount of clicks on an specific item</h4>
-          <table>
+          <DownloadTableExcel
+                    filename="users table"
+                    sheet="users"
+                    currentTableRef={tableRef.current}
+                >
+
+                   <button className="btn btn-success excelexport"> Export excel </button>
+        </DownloadTableExcel>
+          <table ref={tableRef}>
             <tr>
               <th>Item</th>
               <th>Clicks</th>
+              <th>Reset</th>
             </tr>
             
               {clicks.map((item, index) => (
                 <tr key={index}>
                   <td>{item.itemName}</td>
                   <td>{item.clicks}</td>
+                  <td>
+                    <button className="badge badge-warning" onClick={() => resetClicks(item.itemName)}>
+                    RESET
+                    </button>
+                  </td>
+                  
                 </tr>
               ))}
             
@@ -129,7 +161,6 @@ const ClicksList = () => {
     </div>
   );
 };
-
 
 
 export default ClicksList;

@@ -1503,3 +1503,8 @@ th, td {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.excelexport {
+  margin-right: 10px;
+  margin-left: 10px;
+}
