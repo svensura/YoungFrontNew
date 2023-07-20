@@ -22,7 +22,7 @@ import AddCitation from "./components/AddCitation.component";
 import CitationsList from "./components/CitationsList.component";
 import AddTip from "./components/AddTip.component";
 import TipsList from "./components/TipsList.component";
-//import ClickList from "./components/ClickList.component";
+import Statistics from "./components/Statistics.component";
 
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
@@ -156,13 +156,13 @@ class App extends Component {
               </li>
             )}
 
-            {/* {currentUser && (
+            {currentUser && (
               <li className="nav-item">
-                <Link to={"/clickList"} className="nav-link">
+                <Link to={"/statistics"} className="nav-link">
                   Statistics
                 </Link>
               </li>
-            )} */}
+            )}
           </div>
 
           {currentUser ? (
@@ -215,7 +215,7 @@ class App extends Component {
             <Route path="/addUser" element={<AddUser />} />
             <Route path="/tipsList" element={<TipsList/>} />
             <Route path="/addTip" element={<AddTip/>} />
-            {/* <Route path="/clickList" element={<ClickList/>} /> */}
+            <Route path="/statistics" element={<Statistics/>} />
           </Routes>
         </div>
 

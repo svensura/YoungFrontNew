@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const ClickList = () => {
+const Statistics = () => {
   const [clicks, setClicks] = useState([]);
   //const [currentTip, setCurrentTip] = useState(null);
   //const [currentIndex, setCurrentIndex] = useState(-1);
@@ -163,4 +163,4 @@ const ClickList = () => {
 };
 
 
-export default ClickList;
+export default Statistics;
