@@ -35,7 +35,7 @@ const Onscreen  = () => {
   const AbleismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("AbleismusBubble")
+      
       setOnscreenStatus('ABLEISMUS')
     }
     return (
@@ -46,7 +46,7 @@ const Onscreen  = () => {
   const DemokratiefeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("DemokratiefeindlichBubble")
+      
       setOnscreenStatus('DEMOKRATIEFEINDLICH')
     }
     return (
@@ -58,7 +58,7 @@ const Onscreen  = () => {
   const DiskriminierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!ss')
-      ClickDataService.increaseClicks("DiskriminierungBubble")
+      
       setOnscreenStatus('DISKRIMINIERUNG')
     }
     return (
@@ -70,7 +70,7 @@ const Onscreen  = () => {
   const HassImNetzButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks(" HassImNetzBubble")
+      
       setOnscreenStatus('HASSIMNETZ')
     }
     return (
@@ -82,7 +82,7 @@ const Onscreen  = () => {
   const QueerfeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("QueerfeindlichBubble")
+      
       setOnscreenStatus('QUEERFEINDLICH')
     }
     return (
@@ -94,7 +94,7 @@ const Onscreen  = () => {
   const RadikalisierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("RadikalisierungBubble")
+      
       setOnscreenStatus('RADIKALISIERUNG')
     }
     return (
@@ -105,18 +105,18 @@ const Onscreen  = () => {
   const RechteGewaltButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("RechteGewaltBubble")
+      
       setOnscreenStatus('RECHTEGEWALT')
     }
     return (
-      <button type="button" className="rechteGewaltButton swing" onClick={onClick}>
+      <button type="button" className="RechteGewaltButton swing" onClick={onClick}>
       </button>
     );
   };
   const SexismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("SexismusBubble")
+      
       setOnscreenStatus('SEXISMUS')
     }
     return (
@@ -127,7 +127,7 @@ const Onscreen  = () => {
   const SozialeAusgrenzungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
-      ClickDataService.increaseClicks("SozialeAusgrenzungBubble")
+      
       setOnscreenStatus('SOZIALEAUSGRENZUNG')
     }
     return (
@@ -233,6 +233,7 @@ const Onscreen  = () => {
     console.log('STATUS: ' + onscreenStatus);
 
     const nextTip  = (tipNo) => {
+      ClickDataService.increaseClicks(onscreenStatus)
       TipDataService.getCatTips(onscreenStatus)
       .then(response => {
         console.log("DATA: ",response.data)
@@ -291,6 +292,7 @@ const Onscreen  = () => {
       const handleClick = () => {
         console.log(props.text);
         clearTimeout(explainTimeout);
+        ClickDataService.increaseClicks("EigenerTip" + onscreenStatus)
         setTypewriterStatus('ON')
       };
 
