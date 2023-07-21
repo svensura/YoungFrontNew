@@ -573,12 +573,4 @@ const Onscreen  = () => {
 
 };
 
-
-<<<<<<< HEAD
-
-export default Onscreen;
-//
-=======
-//.
-export default Onscreen;
->>>>>>> 578042e95178d46a52279745d63e0b9d31d0b82c
+export default Onscreen
