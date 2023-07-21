@@ -1504,6 +1504,13 @@ th, td {
   padding-right: 10px;
 }
 
+tbody {
+  height: 80vh;
+  display: inline-block;
+  width: 100%;
+  overflow: auto;
+}
+
 .excelexport {
   margin-right: 10px;
   margin-left: 10px;

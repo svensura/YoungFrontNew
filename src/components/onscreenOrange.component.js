@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CitationDataService from "../services/CitationDataService";
+import ClickDataService from "../services/ClickDataService";
 
 
 const OnscreenStatus = {
@@ -23,6 +24,7 @@ const Onscreen  = () => {
 
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("ZitatOrangeEigenesZitat")
       setOnscreenStatus('TYPEWRITER')
     }
 
@@ -34,6 +36,7 @@ const Onscreen  = () => {
   };
 
   const saveAllCitation = (citation) => {
+    ClickDataService.increaseClicks("ZitatOrangeAbgeschickt")
     var data = {
       creator: "test",
       content: citation

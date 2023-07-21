@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import ClickDataService from "../services/ClickDataService";
 
 import KalifatText from '../media/text/KalifatText.js';
 import SchariaText from '../media/text/SchariaText.js';
@@ -176,7 +177,7 @@ const Onscreen  = () => {
     }
 
     console.log ('TEXT: ', text)
-    
+    ClickDataService.increaseClicks("WasIst" + onscreenStatus)
 
     const restartTimeout = () => {
       clearTimeout(explainTimeout);

@@ -28,7 +28,7 @@ const removeCitation = id =>  {
 
 
 const findByCreator = (data) => {
-  return axios.ge(API_URL + `moderator/findCitations`, data, { headers: authHeader() });;
+  return axios.get(API_URL + `moderator/findCitations`, data, { headers: authHeader() });;
 };
 
 const getRandomCitation  = id => {
