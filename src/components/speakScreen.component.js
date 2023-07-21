@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TipDataService from "../services/TipDataService";
-
+import ClickDataService from "../services/ClickDataService";
 
 const OnscreenStatus = {
   BUBBLES: 'BUBBLES',
@@ -35,6 +35,7 @@ const Onscreen  = () => {
   const AbleismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("AbleismusBubble")
       setOnscreenStatus('ABLEISMUS')
     }
     return (
@@ -45,6 +46,7 @@ const Onscreen  = () => {
   const DemokratiefeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("DemokratiefeindlichBubble")
       setOnscreenStatus('DEMOKRATIEFEINDLICH')
     }
     return (
@@ -56,6 +58,7 @@ const Onscreen  = () => {
   const DiskriminierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!ss')
+      ClickDataService.increaseClicks("DiskriminierungBubble")
       setOnscreenStatus('DISKRIMINIERUNG')
     }
     return (
@@ -67,6 +70,7 @@ const Onscreen  = () => {
   const HassImNetzButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks(" HassImNetzBubble")
       setOnscreenStatus('HASSIMNETZ')
     }
     return (
@@ -78,6 +82,7 @@ const Onscreen  = () => {
   const QueerfeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("QueerfeindlichBubble")
       setOnscreenStatus('QUEERFEINDLICH')
     }
     return (
@@ -89,6 +94,7 @@ const Onscreen  = () => {
   const RadikalisierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("RadikalisierungBubble")
       setOnscreenStatus('RADIKALISIERUNG')
     }
     return (
@@ -99,6 +105,7 @@ const Onscreen  = () => {
   const RechteGewaltButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("RechteGewaltBubble")
       setOnscreenStatus('RECHTEGEWALT')
     }
     return (
@@ -109,6 +116,7 @@ const Onscreen  = () => {
   const SexismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("SexismusBubble")
       setOnscreenStatus('SEXISMUS')
     }
     return (
@@ -119,6 +127,7 @@ const Onscreen  = () => {
   const SozialeAusgrenzungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("SozialeAusgrenzungBubble")
       setOnscreenStatus('SOZIALEAUSGRENZUNG')
     }
     return (
@@ -134,6 +143,7 @@ const Onscreen  = () => {
       content: tip
     };
     console.log('DATA to SAVE. ',data);
+    ClickDataService.increaseClicks(onscreenStatus + "EigenerTip")
     TipDataService.createAllTip(data)
       .then(response => {
         console.log(response.data);
@@ -198,9 +208,13 @@ const Onscreen  = () => {
   const Explain  = () => {
 
     const [tip, setTip] = useState("")
+    const [tipNo, setTipNo] = useState(0)
 
     let timeout = 60000 // general screensaver-time 
     let explainTimeout 
+
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
 
     const restartTimeout = () => {
       clearTimeout(explainTimeout);
@@ -213,17 +227,24 @@ const Onscreen  = () => {
     }
 
     useEffect(() => {
-      clearTimeout(explainTimeout)
       restartTimeout()
     }, [restartTimeout, explainTimeout]);
 
     console.log('STATUS: ' + onscreenStatus);
 
-    const getTip  = () => {
+    const nextTip  = (tipNo) => {
       TipDataService.getCatTips(onscreenStatus)
       .then(response => {
-        console.log("CONTENT: ",response.data[0].content)
-        setTip(response.data[0].content)
+        console.log("DATA: ",response.data)
+        console.log("TIPNUMBER: ",tipNo, "LENGTH: ",response.data.length)
+        if (tipNo  < response.data.length){
+          console.log("CONTENT: ",response.data[tipNo].content)
+          setTip(response.data[tipNo].content)
+          restartTimeout()
+        } else {
+          clearTimeout(explainTimeout);
+          setOnscreenStatus('BUBBLES')
+        } 
       })
       .catch(e => {
         //console.log(e);#
@@ -233,7 +254,11 @@ const Onscreen  = () => {
 
     useEffect(() => {
       
-    getTip()
+    setTipNo(tipNo + 1)
+    console.log('NEXT TIP', tipNo);
+    clearTimeout(explainTimeout);
+    nextTip(tipNo)
+    restartTimeout()
 
     }, []);
 
@@ -274,6 +299,20 @@ const Onscreen  = () => {
       );
     };
 
+    const NextButtonComponent = () => {
+      const handleClick = () => {
+        setTipNo(tipNo + 1)
+        console.log('NEXT TIP', tipNo);
+        clearTimeout(explainTimeout);
+        nextTip(tipNo)
+        
+      };
+
+      return (
+        <button type="button" className="nextButton" onClick={ handleClick }></button>
+      );
+    };
+
 
     return (
       <div>
@@ -286,8 +325,9 @@ const Onscreen  = () => {
             {tip}
           </div>
       </div>
-      <PrintButtonComponent/>
+    
       <TipButtonComponent/>
+      <NextButtonComponent/>
       </div>
     )
 
@@ -309,6 +349,9 @@ const Onscreen  = () => {
     const [charsLeft, setCharsLeft] = useState(maxChars)
     let timeout = 30000 // general screensaver-time 
     let typewriterTimeout 
+
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
     
 
     const restartTimeout = () => {
@@ -530,6 +573,4 @@ const Onscreen  = () => {
 
 };
 
-
-
-export default Onscreen;
+export default Onscreen

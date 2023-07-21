@@ -15,7 +15,7 @@ export default class Home extends Component {
     UserService.getPublicContent().then(
       response => {
         this.setState({
-          content: response.data
+          content: response.data || ""
         });
       },
       error => {
@@ -39,3 +39,4 @@ export default class Home extends Component {
     );
   }
 }
+//.

@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CitationDataService from "../services/CitationDataService";
+import ClickDataService from "../services/ClickDataService";
 
 
 const OnscreenStatus = {
@@ -23,17 +24,19 @@ const Onscreen  = () => {
 
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("ZitatOrangeEigenesZitat")
       setOnscreenStatus('TYPEWRITER')
     }
 
     return (
       <button type="button" className="citationButtonOrange" onClick={onClick}>
-      </button>
+      </button>  
     );
   
   };
 
   const saveAllCitation = (citation) => {
+    ClickDataService.increaseClicks("ZitatOrangeAbgeschickt")
     var data = {
       creator: "test",
       content: citation
@@ -83,6 +86,7 @@ const Onscreen  = () => {
      <div>
         <div className="citationDisplayOrange">{citation}</div>
         <Button/>
+        <div className="citationHintOrange">Hinterlasse dein Zitat</div>
       </div>
       
     )
@@ -103,6 +107,9 @@ const Onscreen  = () => {
     const [charsLeft, setCharsLeft] = useState(maxChars)
     let timeout = 15000 // general screensaver-time 
     let typewriterTimeout 
+
+    var noofTimeOuts = setTimeout( function(){});
+    for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
 
     const restartTimeout = () => {
       clearTimeout(typewriterTimeout);
