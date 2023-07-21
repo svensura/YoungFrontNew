@@ -1,5 +1,6 @@
 import axios from 'axios';
 import authHeader from './auth-header';
+import httpErrorHandler from "../services/ErrorService";
 
 //const API_URL = 'http://localhost:8080/api/test/';
 const API_URL = "https://young.herokuapp.com/api/test/";
@@ -7,11 +8,15 @@ const API_URL = "https://young.herokuapp.com/api/test/";
 
 
 const getAllCitations = () => {
-  return axios.get(API_URL + "moderator/allCitations", { headers: authHeader() });
+  return axios
+  .get(API_URL + "moderator/allCitations", { headers: authHeader() })
+  .catch(httpErrorHandler);
 };
 
 const getCitation  = id => {
-  return axios.get(API_URL + `moderator/citation/${id}`,{ headers: authHeader() });
+  return axios
+  .get(API_URL + `moderator/citation/${id}`,{ headers: authHeader() })
+  .catch(httpErrorHandler);
 };
 
 const createCitation = data => {
@@ -40,8 +45,8 @@ const findByCreator = (data) => {
 };
 
 const getRandomCitation  = id => {
-  return axios.
-  get(API_URL + `all/randomCitation`)
+  return axios
+  .get(API_URL + `all/randomCitation`)
   .catch(httpErrorHandler);
 };
 
