@@ -122,25 +122,29 @@ const Statistics = () => {
 
   return (
     <div className="list row">
-                <h4 className="inlineBlock">Amount of clicks on specific item</h4>
-          <DownloadTableExcel filename="users table" sheet="users" currentTableRef={tableRef.current}>
-            <button className="btn btn-success excelexport"> Export excel </button>
-          </DownloadTableExcel>
+
       <div className="col-md-8">
+        <h4 className="inlineBlock">Amount of clicks on specific item</h4>
+        <DownloadTableExcel filename="users table" sheet="users" currentTableRef={tableRef.current}>
+          <button className="btn btn-success excelexport"> Export excel </button>
+        </DownloadTableExcel>
+      </div>    
         <div className="col-md-6" >
 
           <table className="someMargin" ref={tableRef}>
-            {clicks.map((item, index) => (
-              <tr key={index}>
-                <td>{item.itemName}</td>
-                <td>{item.clicks}</td>
-                <td><button className="badge badge-warning excelexport"  onClick={() => resetClicks(item.itemName)}>RESET</button></td>
-              </tr>
-            ))}
+            <tbody>
+              {clicks.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.itemName}</td>
+                  <td>{item.clicks}</td>
+                  <td><button className="badge badge-warning excelexport"  onClick={() => resetClicks(item.itemName)}>RESET</button></td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
+      
       </div>
-    </div>
   );
 };
 
