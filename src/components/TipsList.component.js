@@ -9,7 +9,7 @@ const TipsList = () => {
   const [tips, setTips] = useState([]);
   const [currentTip, setCurrentTip] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchCreator, setSearchCreator] = useState("");
+  //const [searchCreator, setSearchCreator] = useState("");
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
  
   useEffect(() => {
@@ -113,7 +113,7 @@ const TipsList = () => {
       <div className="col-md-6" >
         <h4 className="inlineBlock">Tips List for {currentCategory}</h4>
         
-          <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={refreshList}>
+          <button className="badge badge-warning topMargin" style={{backgroundColor: 'White', float: "right" }} onClick={() => refreshList()}>
                BACK / RELOAD 
           </button>
           
@@ -167,10 +167,10 @@ const TipsList = () => {
             <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: currentTip.checked > 0 ? 'Red' : 'Green'}} onClick={() => changeChecked()}>
               {currentTip.checked ? "IGNORE " : " ALLOW"}
             </button>
-            <button className="badge badge-warning someMargin" onClick={updateTip}>
+            <button className="badge badge-warning someMargin" onClick={() => updateTip()}>
               UPDATE
             </button>
-            <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: 'Red'}} onClick={deleteTip}>
+            <button className="badge badge-warning someMargin" style={{color: 'white', backgroundColor: 'Red'}} onClick={() => deleteTip()}>
                DELETE 
             </button>
           </div>

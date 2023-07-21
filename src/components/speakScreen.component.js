@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TipDataService from "../services/TipDataService";
-
+import ClickDataService from "../services/ClickDataService";
 
 const OnscreenStatus = {
   BUBBLES: 'BUBBLES',
@@ -35,6 +35,7 @@ const Onscreen  = () => {
   const AbleismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("AbleismusBubble")
       setOnscreenStatus('ABLEISMUS')
     }
     return (
@@ -45,6 +46,7 @@ const Onscreen  = () => {
   const DemokratiefeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("DemokratiefeindlichBubble")
       setOnscreenStatus('DEMOKRATIEFEINDLICH')
     }
     return (
@@ -56,6 +58,7 @@ const Onscreen  = () => {
   const DiskriminierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!ss')
+      ClickDataService.increaseClicks("DiskriminierungBubble")
       setOnscreenStatus('DISKRIMINIERUNG')
     }
     return (
@@ -67,6 +70,7 @@ const Onscreen  = () => {
   const HassImNetzButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks(" HassImNetzBubble")
       setOnscreenStatus('HASSIMNETZ')
     }
     return (
@@ -78,6 +82,7 @@ const Onscreen  = () => {
   const QueerfeindlichButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("QueerfeindlichBubble")
       setOnscreenStatus('QUEERFEINDLICH')
     }
     return (
@@ -89,6 +94,7 @@ const Onscreen  = () => {
   const RadikalisierungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("RadikalisierungBubble")
       setOnscreenStatus('RADIKALISIERUNG')
     }
     return (
@@ -99,6 +105,7 @@ const Onscreen  = () => {
   const RechteGewaltButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("RechteGewaltBubble")
       setOnscreenStatus('RECHTEGEWALT')
     }
     return (
@@ -109,6 +116,7 @@ const Onscreen  = () => {
   const SexismusButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("SexismusBubble")
       setOnscreenStatus('SEXISMUS')
     }
     return (
@@ -119,6 +127,7 @@ const Onscreen  = () => {
   const SozialeAusgrenzungButton = () => {
     const onClick = () => {
       console.log('Button clicked!')
+      ClickDataService.increaseClicks("SozialeAusgrenzungBubble")
       setOnscreenStatus('SOZIALEAUSGRENZUNG')
     }
     return (
@@ -134,6 +143,7 @@ const Onscreen  = () => {
       content: tip
     };
     console.log('DATA to SAVE. ',data);
+    ClickDataService.increaseClicks(onscreenStatus + "EigenerTip")
     TipDataService.createAllTip(data)
       .then(response => {
         console.log(response.data);
@@ -202,7 +212,6 @@ const Onscreen  = () => {
 
     let timeout = 60000 // general screensaver-time 
     let explainTimeout 
- 
 
     var noofTimeOuts = setTimeout( function(){});
     for (var i = 0 ; i < noofTimeOuts ; i++) clearTimeout(i);
@@ -565,6 +574,11 @@ const Onscreen  = () => {
 };
 
 
+<<<<<<< HEAD
 
 export default Onscreen;
 //
+=======
+//.
+export default Onscreen;
+>>>>>>> 578042e95178d46a52279745d63e0b9d31d0b82c

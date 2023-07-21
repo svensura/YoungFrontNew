@@ -1496,3 +1496,22 @@ li{
   -webkit-animation-name: swing; 
   animation-name: swing; 
 }
+
+th, td {
+  border: 1px solid;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+tbody {
+  height: 80vh;
+  display: inline-block;
+  width: 100%;
+  overflow: auto;
+}
+
+.excelexport {
+  margin-right: 10px;
+  margin-left: 10px;
+}
